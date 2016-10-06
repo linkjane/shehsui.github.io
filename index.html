@@ -8,38 +8,6 @@
     </style>
 </head>
 <body>
-<div ng-controller="Test">
-    <form action="" ng-submit="submit($event)">
-        <input type="text"><br/>
-        <input type="text"><br/>
-        <button type="submit">submit</button>
-    </form>
-</div>
-<summernote> this is initial test</summernote>
-<button>click!</button>
-<script src="bower_components/angular/angular.js"></script>
-<script src="node_modules/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-summernote/dist/angular-summernote.js"></script>
-<script>
-    var app = angular.module('App',['ngResource', 'summernote']);
-
-
-    app.factory('Notes', ['$resource', function ($resource) {
-        return $resource('/user/:curid', {curid: '@ha'}, {
-            update: {method: 'PUT'}
-        });
-    }]);
-
-    app.controller('Test', function ($scope, Notes) {
-        $scope.name = 'iloveyou'
-        $scope.submit = function (e) {
-            e.preventDefault();
-            const note = Notes.save({ha: 4});
-            console.log(note);
-        }
-    });
-
-
-</script>
+    张振西的个人网页
 </body>
 </html>
